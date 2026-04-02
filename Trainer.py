@@ -5,7 +5,7 @@ from datetime import datetime
 class Trainer(object):
     
     def __init__(self):
-        td = np.load('bin_data/training_fv.npy').item()
+        td = np.load('bin_data/training_fv.npy', allow_pickle=True).item()
         self.samples = td['samples']
         self.labels = td['labels']
         

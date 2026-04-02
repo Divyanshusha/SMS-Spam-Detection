@@ -10,7 +10,7 @@ with open('dataset/test/sms-data','w') as outfile:
             matches = re.findall(regexp,line)
             
             if len(matches) == 0:
-                continue
+                continue 
             
             text = matches[0]
             

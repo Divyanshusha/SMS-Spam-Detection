@@ -7,7 +7,7 @@ class FeatureModel(object):
     
     
     def extract_features(self):
-        tokens = np.load('bin_data/training-tokens.npy').item()
+        tokens = np.load('bin_data/training-tokens.npy', allow_pickle=True).item()
         features = set([])
         
         min_threshold = 5
@@ -51,9 +51,9 @@ class FeatureModel(object):
     
     
     def compute_fv_matrix(self,purpose):
-        data = np.load('bin_data/'+purpose+'-data.npy').item()
+        data = np.load('bin_data/'+purpose+'-data.npy', allow_pickle=True).item()
         
-        features = np.load('bin_data/features.npy').item()
+        features = np.load('bin_data/features.npy', allow_pickle=True).item()
         feature_count = len(features) + 3
         
         samples = []
@@ -75,9 +75,9 @@ class FeatureModel(object):
     
     
     def compute_custom_fv_matrix(self,purpose):
-        data = np.load('bin_data/'+purpose+'-data.npy').item()
+        data = np.load('bin_data/'+purpose+'-data.npy', allow_pickle=True).item()
         
-        features = np.load('bin_data/features.npy').item()
+        features = np.load('bin_data/features.npy', allow_pickle=True).item()
         feature_count = len(features) + 3
         
         samples = []

@@ -4,11 +4,11 @@ from datetime import datetime
 class Tester(object):
     
     def __init__(self,dpath,cpath):
-        td = np.load(dpath).item()
+        td = np.load(dpath, allow_pickle=True).item()
         self.samples = td['samples']
         self.labels = td['labels']
         
-        self.classifier = np.load(cpath).item()
+        self.classifier = np.load(cpath, allow_pickle=True).item()
     
     
     def test_classifier(self):
