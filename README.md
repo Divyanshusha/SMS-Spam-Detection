@@ -4,7 +4,7 @@ http://cs229.stanford.edu/proj2013/ShiraniMehr-SMSSpamDetectionUsingMachineLearn
 
 This paper is present in references/ folder.
 
-It is written in Python.
+It is written in Python 2.
 
 Prerequisites for running this project are:
 
